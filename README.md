@@ -19,7 +19,7 @@ Steps taken to get to failure
 Errors given
 ============
 **For Chrome**
-```
+```ruby
 options = Selenium::WebDriver::Remote::Capabilities.chrome({
     accept_insecure_certs: true,
     download: {
@@ -48,7 +48,7 @@ FAIL: 1
 ```
 
 **For Firefox**
-```
+```ruby
 browser = Watir::Browser.new(:firefox, :desired_capabilities => Selenium::WebDriver::Remote::Capabilities.firefox(:accept_insecure_certs => true))
 ```
 Returns the following:
