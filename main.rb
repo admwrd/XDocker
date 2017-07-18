@@ -16,16 +16,17 @@ os = "linux"
 if `uname -a`.include? "Darwin"
 	os = "mac"
 end
-Selenium::WebDriver::Chrome.driver_path = File.dirname(__FILE__)+"/bin/#{os}/x86_64/chromedriver"
-options = Selenium::WebDriver::Remote::Capabilities.chrome({
-	accept_insecure_certs: true,
-	download: {
-		prompt_for_download: false,
-		default_directory: 'bin/linux/x86_64'
-	}
-})
-#browser = Watir::Browser.new(:chrome, :prefs => prefs, :desired_capabilities => Selenium::WebDriver::Remote::Capabilities.chrome(:accept_insecure_certs => true))
-browser = Watir::Browser.new(:chrome, :desired_capabilities => options)
+#Selenium::WebDriver::Chrome.driver_path = File.dirname(__FILE__)+"/bin/#{os}/x86_64/chromedriver"
+# options = Selenium::WebDriver::Remote::Capabilities.chrome({
+# 	accept_insecure_certs: true,
+# 	download: {
+# 		prompt_for_download: false,
+# 		default_directory: 'bin/linux/x86_64'
+# 	}
+# })
+# browser = Watir::Browser.new(:firefox, :prefs => prefs, :desired_capabilities => Selenium::WebDriver::Remote::Capabilities.chrome(:accept_insecure_certs => true))
+#browser = Watir::Browser.new(:chrome, :desired_capabilities => options)
+browser = Watir::Browser.new(:firefox, :desired_capabilities => Selenium::WebDriver::Remote::Capabilities.firefox(:accept_insecure_certs => true))
 
 browser.goto(search_url)
 browser.input(:xpath => '//input[@title="Search"]').to_subtype.clear
