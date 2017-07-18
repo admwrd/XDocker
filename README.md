@@ -30,7 +30,7 @@ browser = Watir::Browser.new(:chrome, :desired_capabilities => options)
 
 Returns the following:
 
-``
+```
 /usr/local/bundle/gems/selenium-webdriver-3.4.4/lib/selenium/webdriver/common/service.rb:138:in `connect_until_stable': unable to connect to chromedriver 127.0.0.1:9515 (Selenium::WebDriver::Error::WebDriverError)                     
     from /usr/local/bundle/gems/selenium-webdriver-3.4.4/lib/selenium/webdriver/common/service.rb:74:in `block in start'                                        
     from /usr/local/bundle/gems/selenium-webdriver-3.4.4/lib/selenium/webdriver/common/socket_lock.rb:41:in `locked'                                          
@@ -43,7 +43,7 @@ Returns the following:
     from main.rb:25:in `new'          
     from main.rb:25:in `<main>'         
 FAIL: 1
-``
+```
 
 **For Firefox**
 ```
@@ -51,7 +51,7 @@ browser = Watir::Browser.new(:firefox, :desired_capabilities => Selenium::WebDri
 ```
 Returns the following:
 
-``
+```
 /usr/local/bundle/gems/selenium-webdriver-3.4.4/lib/selenium/webdriver/remote/response.rb:69:in `assert_ok': Unable to find a matching set of capabilities (Selenium::WebDriver::Error::SessionNotCreatedError)
     from /usr/local/bundle/gems/selenium-webdriver-3.4.4/lib/selenium/webdriver/remote/response.rb:32:in `initialize'
     from /usr/local/bundle/gems/selenium-webdriver-3.4.4/lib/selenium/webdriver/remote/http/common.rb:83:in `new'
@@ -69,4 +69,4 @@ Returns the following:
     from main.rb:29:in `new'
     from main.rb:29:in `<main>'
 FAIL: 1
-``
+```
