@@ -11,6 +11,7 @@ This should take the following steps:
 Steps taken to get to failure
 =============================
 * git clone https://github.com/admwrd/XDocker.git
+* cd XDocker
 * docker build -t dxfail .
 * docker run dxfail
 
