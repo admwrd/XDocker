@@ -29,6 +29,7 @@ browser = Watir::Browser.new(:chrome, :desired_capabilities => options)
 ```
 
 Returns the following:
+
 ``
 /usr/local/bundle/gems/selenium-webdriver-3.4.4/lib/selenium/webdriver/common/service.rb:138:in `connect_until_stable': unable to connect to chromedriver 127.0.0.1:9515 (Selenium::WebDriver::Error::WebDriverError)                                       
 				from /usr/local/bundle/gems/selenium-webdriver-3.4.4/lib/selenium/webdriver/common/service.rb:74:in `block in start'                                                                              
@@ -48,6 +49,7 @@ FAIL: 1
 ```
 browser = Watir::Browser.new(:firefox, :desired_capabilities => Selenium::WebDriver::Remote::Capabilities.firefox(:accept_insecure_certs => true))
 ```
+Returns the following:
 
 ``
 /usr/local/bundle/gems/selenium-webdriver-3.4.4/lib/selenium/webdriver/remote/response.rb:69:in `assert_ok': Unable to find a matching set of capabilities (Selenium::WebDriver::Error::SessionNotCreatedError)
